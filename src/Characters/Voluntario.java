@@ -11,7 +11,17 @@ public class Voluntario extends KGB {
         super(nombre, turno, idCeldaActual, marca);
     }
 
+    @Override
+    public void realizarAcciones(PrintWriter escribidor) {
+        mover(escribidor);
+        catalogar(escribidor);
+    }
 
+
+    @Override
+    public String toString() {
+        return "Voluntario" + super.toString();
+    }
 
     public void catalogar(PrintWriter escribidor) {
         int posicion_actual = getIdCeldaActual();
