@@ -17,6 +17,16 @@ public abstract class KGB extends Personaje{
 
     public abstract void catalogar(PrintWriter escribidor);
 
+    @Override
+    public String toString() {
+        return "{" +
+                Constantes.NOMBRE + getNombre() +
+                Constantes.TURNO_ + getTurno() +
+                Constantes.ID_CELDA_ACTUAL + getIdCeldaActual() +
+                Constantes.MARCA + getMarca() +
+                '}';
+    }
+
 
 
 }
