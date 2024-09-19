@@ -48,5 +48,61 @@ public class Cientifico {
     }
 
 
+    public void cogerLlave(PrintWriter escribidor) {
+        CentralNuclear central = CentralNuclear.getInstancia();
+        int posicion_actual = this.getIdCeldaActual();
+        Celda celdaActual = central.getCelda(Utilidad.calcularFila(posicion_actual), Utilidad.calcularColumna(posicion_actual));
+        if (celdaActual.getLlave() != null) {
+            escribidor.println(getNombre() + Constantes.LLAVE_RECOGIDA + celdaActual.getIdentificador_celda() + Constantes.PUNTO);
+            set_llaves.add(celdaActual.getLlave());
+            celdaActual.setLlave(null);
+        }
+    }
+
+    @Override
+    public String toString() {
+        return Constantes.CIENTIFICO + super.toString()+'}';
+    }
+
+
+
+
+
+
+    @Override
+    public void realizarAcciones(PrintWriter escribidor) {
+        boolean puerta_salida;
+        puerta_salida = this.comprobarPuertaSalida();
+        if(!puerta_salida) {
+            mover(escribidor);
+            cogerLlave(escribidor);
+            abrirPuerta(escribidor);
+
+        }
+
+    }
+
+    public boolean abrirPuerta(PrintWriter escribidor) {
+        int fila = Utilidad.calcularFila(getIdCeldaActual());
+        int columna = Utilidad.calcularColumna(getIdCeldaActual());
+        CentralNuclear central = CentralNuclear.getInstancia();
+        Celda celda_actual = central.getCelda(fila, columna);
+        boolean enc = false;
+
+        if (celda_actual.getPuerta() != null) {
+            Iterator<Llave> it = this.set_llaves.iterator();
+            while (it.hasNext() && !enc) {
+                Llave clave = it.next();
+                if (celda_actual.getPuerta().getId_llave() == clave.getIdLlave()) {
+                    enc = true;
+                    celda_actual.getPuerta().setAbierta(enc);
+                    escribidor.println(getNombre() + Constantes.PUERTA_ABIERTA);
+                }
+            }
+        }
+        return enc;
+    }
+
+
 
 }
