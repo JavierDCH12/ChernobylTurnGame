@@ -64,6 +64,11 @@ public abstract class Operador extends Personaje {
 
     }
 
+    @Override
+    public String toString() {
+        return Constantes.OPERADOR_CAT + catalogado + Constantes.EN_PUERTA + enPuertaSalida + "]";
+    }
+
 
 
 
