@@ -3,6 +3,8 @@ package Characters;
 
 import General.Celda;
 
+import java.io.PrintWriter;
+
 public class Robot extends Personaje {
 
     private ArrayList<Integer> lista_id_celda;
