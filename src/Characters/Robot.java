@@ -1,6 +1,8 @@
 package Characters;
 
 
+import General.Celda;
+
 public class Robot extends Personaje {
 
     private ArrayList<Integer> lista_id_celda;
