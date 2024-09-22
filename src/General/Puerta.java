@@ -41,4 +41,22 @@ public class Puerta {
         return abierta;
     }
 
+    public int getId_llave() {
+        return id_llave;
+    }
+
+    public void setId_llave(int id_llave) {
+        this.id_llave = id_llave;
+    }
+
+
+
+    @Override
+    public String toString() {
+        return Constantes.PUERTA_IDCELDA + identificador_celda + Constantes.ABIERTA + abierta + Constantes.ID_LLAVE + id_llave
+                + "]";
+    }
+
+
+
 }
