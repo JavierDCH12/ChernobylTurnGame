@@ -5,7 +5,7 @@ import Characters.Personaje;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 
-import Generico.Utilidad;
+import General.Utilidad;
 
 
 public class CentralNuclear {
@@ -285,8 +285,7 @@ public class CentralNuclear {
     /***************************************************************************************/
     /***************************************************************************************/
 
-    /* Retorna true si la celda NO es accesible (hay un edificio, un árbol, ...).
-       El método es privado porque sólo se utiliza en la clase CentralNuclear */
+    /* Retorna true si la celda NO es accesible (hay un edificio, un árbol, ...) */
     private boolean celdaNoAccesible(int idCelda){
         boolean noAccesible = true;
         int j = 0;
@@ -302,8 +301,7 @@ public class CentralNuclear {
 
     /*********************METODOS MATRIZ POR PANTALLA*********************************/
 
-    /* Pinta la primera línea del CentralNuclear. El método es privado porque sólo se utiliza
-       en la clase CentralNuclear */
+
 
 
     /*private void pintarLineaSuperior(int i){
@@ -342,9 +340,12 @@ public class CentralNuclear {
         System.out.print("\n");
     }
 
-    /* Pinta línea inferior del CentralNuclear. El método es privado porque sólo se utiliza
+    /* Pinta línea inferior del CentralNuclear.
+    l metodo es privado porque sólo se utiliza
+
        en la clase CentralNuclear */
-   /* private void pintarLineaInferior(){
+
+    /*private void pintarLineaInferior(){
         //Línea inferior. Empezamos dejando un hueco para dejas un primer hueco para pintar la línea izquierda
         System.out.print(" ");
         for(int j = 0; j < this.matriz[0].length;j++){
@@ -354,9 +355,12 @@ public class CentralNuclear {
         System.out.print("\n");
     }*/
 
-    /* Pinta la columna 0 de la matriz. El método es privado porque sólo se utiliza
+    /* Pinta la columna 0 de la matriz.
        en la clase CentralNuclear */
-   /* private void pintarColumnaCero(int celdaOrigen, int celdaDestino, int i, int j, int x){
+
+    /*
+    private void pintarColumnaCero(int celdaOrigen, int celdaDestino, int i, int j, int x){
+
         if  (celdaNoAccesible(celdaOrigen)){
             System.out.print("|///////|");
         }
@@ -382,10 +386,12 @@ public class CentralNuclear {
         }
 
     }
+    */
 
-    /* Pinta las columnas de la matriz (excepto la columna 0). El método es privado
-       porque sólo se utiliza en la clase CentralNuclear */
-    /*private void pintarRestoColumnas(int celdaOrigen, int celdaDestino, int i, int j, int x){
+
+    /*
+    private void pintarRestoColumnas(int celdaOrigen, int celdaDestino, int i, int j, int x){
+
         if  (celdaNoAccesible(celdaOrigen)){
             System.out.print("///////|");
         }
@@ -410,10 +416,13 @@ public class CentralNuclear {
             }
         }
     }
+    */
 
-    /* Pinta la fila "i" de la matriz. El método es privado porque sólo se utiliza
-       en la clase CentralNuclear */
-    /*private void pintarFila(int i){
+
+
+    /*
+
+    private void pintarFila(int i){
         int j, x;
         int celdaOrigen, celdaDestino;
         for(x = 0; x < 3;x++){  //Cada celda la dividimos en 3 líneas
@@ -435,8 +444,9 @@ public class CentralNuclear {
         }
     }*/
 
-    /*Muestra el CentralNuclear al usuario */
-   /* public void mostrarMatriz(){
+   /*
+
+   public void mostrarMatriz(){
         int i;
 
         for(i = 0; i < this.matriz.length;i++){  //Filas
