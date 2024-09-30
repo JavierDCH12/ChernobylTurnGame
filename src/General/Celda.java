@@ -1,5 +1,7 @@
 package General;
 
+import Characters.Personaje;
+
 public class Celda {
 
     private int identificador_celda;

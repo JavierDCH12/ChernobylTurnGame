@@ -1,5 +1,9 @@
 package Characters;
 
+import General.Constantes;
+
+import java.io.PrintWriter;
+
 public abstract class KGB extends Personaje{
 
     // Constructor por defecto

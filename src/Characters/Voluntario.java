@@ -1,6 +1,13 @@
 package Characters;
 
 
+import General.Celda;
+import General.CentralNuclear;
+import General.Constantes;
+import General.Utilidad;
+
+import java.io.PrintWriter;
+
 public class Voluntario extends KGB {
 
     public Voluntario() {

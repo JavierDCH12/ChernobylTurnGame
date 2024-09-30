@@ -1,5 +1,11 @@
 package Characters;
 
+import General.Celda;
+import General.CentralNuclear;
+import General.Utilidad;
+
+import java.io.PrintWriter;
+
 public abstract class Operador extends Personaje {
 
     private boolean catalogado;
@@ -63,6 +69,8 @@ public abstract class Operador extends Personaje {
 
 
     }
+
+    public abstract void realizarAcciones(PrintWriter escribidor);
 
     @Override
     public String toString() {

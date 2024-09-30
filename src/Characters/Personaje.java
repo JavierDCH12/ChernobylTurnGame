@@ -1,5 +1,12 @@
 package Characters;
 
+import General.Celda;
+import General.CentralNuclear;
+import General.Constantes;
+
+import java.io.PrintWriter;
+import java.util.ArrayList;
+
 public abstract class Personaje {
     private String nombre;
     private int turno;

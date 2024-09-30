@@ -1,6 +1,6 @@
 package Characters;
 
-public class Cientifico {
+public class Cientifico extends Operador {
 
     private HashSet<Llave> set_llaves;
 

@@ -1,5 +1,12 @@
 package Characters;
 
+import General.Celda;
+import General.CentralNuclear;
+import General.Constantes;
+import General.Utilidad;
+
+import java.io.PrintWriter;
+
 public class Bombero extends Operador {
     private int bateriaRefrigerador;
 

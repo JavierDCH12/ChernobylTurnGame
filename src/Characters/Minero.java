@@ -1,5 +1,12 @@
 package Characters;
 
+import General.Celda;
+import General.CentralNuclear;
+import General.Constantes;
+import General.Utilidad;
+
+import java.io.PrintWriter;
+
 public class Minero extends Operador {
 
     private ArrayList<Integer> lEscombros;
@@ -86,6 +93,14 @@ public class Minero extends Operador {
         return celdaActual.getPuerta() != null;
     }
 
+    @Override
+    public void realizarAcciones(PrintWriter escribidor) {
+
+        if(!comprobarPuertaSalida()) {
+            mover(escribidor);
+            desescombrar(escribidor);
+        }
+    }
 
 
 }
